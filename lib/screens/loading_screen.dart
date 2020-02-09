@@ -17,9 +17,13 @@ class _LoadingScreenState extends State<LoadingScreen> {
   // function to get the device's location
   void getLocation() async {
     Location location = Location();
+
     await location.getCurrentLocation();
-    print(location.latitude);
-    print(location.longitude);
+
+    double lat = location.latitude;
+    double long = location.longitude;
+
+    print('Latitude: $lat , Longitude: $long');
   }
 
   @override
